@@ -1,18 +1,54 @@
-## Getting Started
+# Sistema de Gerenciamento de Vendas com JPA e Hibernate
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Projeto desenvolvido durante a formação em Desenvolvimento Full Stack Java pela EBAC, com foco na persistência e gerenciamento de dados utilizando JPA e Hibernate.
 
-## Folder Structure
+## Sobre o projeto
 
-The workspace contains two folders by default, where:
+O projeto implementa um sistema para gerenciamento de clientes, produtos e vendas, utilizando Java e uma arquitetura organizada em camadas.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+A aplicação utiliza o padrão DAO e uma camada de Services para separar as responsabilidades do sistema, além de realizar a persistência dos dados em um banco PostgreSQL por meio do JPA e Hibernate.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Tecnologias utilizadas
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+- Java
+- JPA
+- Hibernate
+- PostgreSQL
+- JDBC
+- JUnit
+- Maven
 
-## Dependency Management
+## Principais funcionalidades
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+### Clientes
+- Cadastro de clientes;
+- Consulta de clientes;
+- Atualização de clientes;
+- Exclusão de clientes.
+
+### Produtos
+- Cadastro de produtos;
+- Consulta de produtos;
+- Atualização de produtos;
+- Exclusão de produtos.
+
+### Vendas
+- Cadastro e gerenciamento de vendas;
+- Associação de clientes às vendas;
+- Associação de produtos às vendas;
+- Gerenciamento das informações relacionadas às vendas.
+
+## Arquitetura
+
+O projeto utiliza uma organização em camadas, separando as responsabilidades entre:
+
+```text
+Entidades
+    ↓
+DAO
+    ↓
+Service
+    ↓
+Persistência com JPA/Hibernate
+    ↓
+PostgreSQL
